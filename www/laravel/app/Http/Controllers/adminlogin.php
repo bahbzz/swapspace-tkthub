@@ -33,7 +33,7 @@ class adminLogin extends Controller {
     		
     	} else {
     		$_SESSION['admin_id'] = $admin_id;
-    		return redirect()->intended(route('welcome'));
+    		return view('welcome');
     	}
     }
 

@@ -27,7 +27,7 @@ Route::get('/adminregister',[
     'uses' => 'AdminRegister@getadminRegister',
     'as' => 'adminregister']);
 
-/*Route::post('/adminregister',[
+Route::post('/adminregister',[
     'uses' => 'AdminRegister@postAdminregister',
     'as' => 'adminregister']);
-*/
+
