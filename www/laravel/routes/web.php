@@ -31,3 +31,14 @@ Route::post('/adminregister',[
     'uses' => 'AdminRegister@postAdminregister',
     'as' => 'adminregister']);
 
+Route::get('/addcategory',[
+	'uses' => 'AddCategory@getaddCategory',
+	'as' => 'addcategory']);
+
+Route::post('/addcategory',[
+	'uses' => 'AddCategory@doAdd',
+	'as' => 'addcategory']);
+
+Route::get('/viewcategory',[
+	'uses' => 'ViewCategory@getviewCategory',
+	'as' => 'viewcategory']);

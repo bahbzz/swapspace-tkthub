@@ -6,7 +6,7 @@
 					<li><a href="/addcategory" class="">Add Category</a></li>
 					<li><a href="/viewcategory">View Category</a></li>
 					<li><a href="/addproducts">Add Products</a></li>
-					<li><a href="/viewproduct">View Products</a></li>
+					<li><a href="/viewproducts">View Products</a></li>
 				</ul>
 			</nav>
 		</div>
