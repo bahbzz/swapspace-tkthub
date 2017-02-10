@@ -2,6 +2,7 @@
 @section ('title') @endsection
 @section ('content')
 
+	<div class="wrapper">
 		<table id="tab">
 			<thead>
 				<tr>
@@ -26,5 +27,6 @@
 
        		</tbody>
 		</table>
+	</div>	
 
 @stop
