@@ -50,3 +50,7 @@ Route::get('/addproduct',[
 Route::post('/addproduct',[
 	'uses' => 'AddProduct@doAddProducts',
 	'as' => 'addproduct']);
+
+Route::get('/viewproduct',[
+	'uses' => 'ViewProduct@getviewProduct',
+	'as' => 'viewproduct']);
