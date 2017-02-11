@@ -46,3 +46,7 @@ Route::get('/viewcategory',[
 Route::get('/addproduct',[
 	'uses' => 'AddProduct@showProductpg',
 	'as' => 'addproduct']);
+
+Route::post('/addproduct',[
+	'uses' => 'AddProduct@doAddProducts',
+	'as' => 'addproduct']);

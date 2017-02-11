@@ -7,7 +7,7 @@
 		<h1 id="register-label">Add Products</h1>
 				<hr>
 
-				<form id="register" action="/addproducts" method="POST" enctype="multipart/form-data">
+				<form id="register" action="/addproduct" method="POST" enctype="multipart/form-data">
 					<div>
 						@if (count($errors) > 0)
                     	<div class="alert alert-danger">                

@@ -10,4 +10,6 @@ class product extends Model {
 			$prdt = Product::all();
 			return $prdt;
 		}
+
+	
 }

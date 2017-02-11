@@ -4,7 +4,6 @@
 	namespace App\Http\Controllers;
 	use App\category;
 	use Illuminate\Http\Request;
-	use\libs\fileupload as Uploader;
 	use App\product;
 	
 		
@@ -17,42 +16,41 @@
 
 		public function doAddProducts(Request $request) {
 			 
+
+			 	 
+			 
 			 $this->validate($request,[
-				'name' =>'required|!numeric',
-				'auth' => 'required|!numeric',
+				'name' =>'required',
+				'auth' => 'required',
 				'price' => 'required|numeric',
-				'bkcat' => 'nulltype'
+				'bkcat' => 'required',
+				'pic' => 'required'
 				
 				]);
+			 	$rnd = uniqid(rand(0, 9), true);
+			 	$imageName = $rnd . '.' .$request->file('pic')->getClientOriginalExtension();
 
-			$fp = new Uploader(['image/jpg','image/jpeg', 'image/png'], 2097152, $_ENV['HOUSE'].'/www/uploads/', $_FILES['pic'], '/uploads/');
-				$res = $fp->doUpload();
+    			$request->file('pic')->move(
+        		base_path() . '/public/uploads/', $imageName
+    			);
 
-			if($res[0] == FALSE) {
-				$error['pic'] = $res[1];
-			}
-			//dump($error);
-			//exit();
-
-			if(empty($error)){
-			
 				$n_prodct = new Product();
 				$n_prodct->category_id = $_REQUEST['bkcat'];
 				$n_prodct->product_name = $_REQUEST['name'];
 				$n_prodct->author_name = $_REQUEST['auth'];
-				$n_prodct->image = $res[1];
+				$n_prodct->image = $imageName;
 				$n_prodct->price = $_REQUEST['price'];
 				$n_prodct->save();
+
 				
 
-				header("Location: /addproducts");
+    			return view('addproduct',['cat'=>Category::getAllCategories()]);
 
-			} else {
 				
-				echo $this->blade->render('addproducts', ["errors"=>$error, 'cat'=>Category::getAllCategories()]);
+
 			}
-		}
-
-
 		
-	}
+		
+    	}			
+		
+	
