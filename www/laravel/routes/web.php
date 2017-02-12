@@ -58,3 +58,11 @@ Route::get('/viewproduct',[
 Route::get('/editcategory/{id}/',[
 	'uses' => 'Editcategory@geteditCategory',
 	'as' => 'editcategory']);
+
+Route::get('/editproduct/{id}/',[
+	'uses' => 'Editproduct@showEditProductpage',
+	'as' => 'editproduct']);
+
+Route::post('/editproduct/{id}/',[
+	'uses' => 'Editproduct@doEditProduct',
+	'as' => 'editproduct']);
