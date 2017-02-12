@@ -70,3 +70,11 @@ Route::get('/editproduct/{id}/',[
 Route::post('/editproduct/{id}/',[
 	'uses' => 'Editproduct@doEditProduct',
 	'as' => 'editproduct']);
+
+Route::get('/deleteproduct/{id}/',[
+	'uses' => 'Deleteproduct@DoDeleteproduct',
+	'as' => 'deleteproduct']);
+
+Route::get('/deletecategory/{id}/',[
+	'uses' => 'Deletecategory@doDeleteCategory',
+	'as' => 'deletecategory']);

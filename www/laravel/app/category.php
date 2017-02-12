@@ -15,5 +15,10 @@ class category extends Model {
 	public static function getCategory($id) {
 		$caty = category::where("category_id", '=', $id)->first();
 		return $caty;
-		}
+	}
+
+	public function categories() {
+
+		return $this->hasMany('App\product');
+	}
 }
