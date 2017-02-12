@@ -17,7 +17,7 @@
 		public function doAdd(Request $request) {
 
 			 $this->validate($request, [
-              'cname' => 'required|alpha'
+              'cname' => 'required|alpha dash|alpha'
         	]);
 			
 			$cat = new category();

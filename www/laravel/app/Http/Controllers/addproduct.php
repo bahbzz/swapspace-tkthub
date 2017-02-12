@@ -11,7 +11,7 @@
 		
 
 		public function showProductpg() {
-			return view('addproduct', ['cat'=>Category::getAllCategories()]);
+			return view('addproduct', ['cat'=>category::getAllCategories()]);
 		}
 
 		public function doAddProducts(Request $request) {
