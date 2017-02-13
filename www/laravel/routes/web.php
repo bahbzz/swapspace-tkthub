@@ -31,50 +31,54 @@ Route::post('/adminregister',[
     'uses' => 'AdminRegister@postAdminregister',
     'as' => 'adminregister']);
 
-Route::get('/addcategory',[
-	'uses' => 'AddCategory@getaddCategory',
-	'as' => 'addcategory']);
+//Route::group(['middleware' => 'auth'], function() {
 
-Route::post('/addcategory',[
-	'uses' => 'AddCategory@doAdd',
-	'as' => 'addcategory']);
+	Route::get('/addcategory',[
+		'uses' => 'AddCategory@getaddCategory',
+		'as' => 'addcategory']);
 
-Route::get('/viewcategory',[
-	'uses' => 'ViewCategory@getviewCategory',
-	'as' => 'viewcategory']);
+	Route::post('/addcategory',[
+		'uses' => 'AddCategory@doAdd',
+		'as' => 'addcategory']);
 
-Route::get('/addproduct',[
-	'uses' => 'AddProduct@showProductpg',
-	'as' => 'addproduct']);
+	Route::get('/viewcategory',[
+		'uses' => 'ViewCategory@getviewCategory',
+		'as' => 'viewcategory']);
 
-Route::post('/addproduct',[
-	'uses' => 'AddProduct@doAddProducts',
-	'as' => 'addproduct']);
+	Route::get('/addproduct',[
+		'uses' => 'AddProduct@showProductpg',
+		'as' => 'addproduct']);
 
-Route::get('/viewproduct',[
-	'uses' => 'ViewProduct@getviewProduct',
-	'as' => 'viewproduct']);
+	Route::post('/addproduct',[
+		'uses' => 'AddProduct@doAddProducts',
+		'as' => 'addproduct']);
 
-Route::get('/editcategory/{id}/',[
-	'uses' => 'Editcategory@geteditCategory',
-	'as' => 'editcategory']);
+	Route::get('/viewproduct',[
+		'uses' => 'ViewProduct@getviewProduct',
+		'as' => 'viewproduct']);
 
-Route::post('/editcategory/{id}/',[
-	'uses' => 'Editcategory@doEditCategory',
-	'as' => 'editcategory']);
+	Route::get('/editcategory/{id}/',[
+		'uses' => 'Editcategory@geteditCategory',
+		'as' => 'editcategory']);
 
-Route::get('/editproduct/{id}/',[
-	'uses' => 'Editproduct@showEditProductpage',
-	'as' => 'editproduct']);
+	Route::post('/editcategory/{id}/',[
+		'uses' => 'Editcategory@doEditCategory',
+		'as' => 'editcategory']);
 
-Route::post('/editproduct/{id}/',[
-	'uses' => 'Editproduct@doEditProduct',
-	'as' => 'editproduct']);
+	Route::get('/editproduct/{id}/',[
+		'uses' => 'Editproduct@showEditProductpage',
+		'as' => 'editproduct']);
 
-Route::get('/deleteproduct/{id}/',[
-	'uses' => 'Deleteproduct@DoDeleteproduct',
-	'as' => 'deleteproduct']);
+	Route::post('/editproduct/{id}/',[
+		'uses' => 'Editproduct@doEditProduct',
+		'as' => 'editproduct']);
 
-Route::get('/deletecategory/{id}/',[
-	'uses' => 'Deletecategory@doDeleteCategory',
-	'as' => 'deletecategory']);
+	Route::get('/deleteproduct/{id}/',[
+		'uses' => 'Deleteproduct@DoDeleteproduct',
+		'as' => 'deleteproduct']);
+
+	Route::get('/deletecategory/{id}/',[
+		'uses' => 'Deletecategory@doDeleteCategory',
+		'as' => 'deletecategory']);
+
+//});

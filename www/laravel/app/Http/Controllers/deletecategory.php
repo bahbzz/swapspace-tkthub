@@ -14,7 +14,7 @@
 			
 			$cat->delete();
 
-			return view('viewcategory', ['cat' => category::getAllCategories()]);
+			return redirect()->route('viewcategory');
 
 		}
 	}

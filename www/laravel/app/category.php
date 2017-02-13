@@ -14,6 +14,7 @@ class category extends Model {
 
 	public static function getCategory($id) {
 		$caty = category::where("category_id", '=', $id)->first();
+		//echo $caty->category_name; 
 		return $caty;
 	}
 
