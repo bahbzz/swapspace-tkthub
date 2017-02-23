@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ph-7/qrcode-generator-php-class": "^2.0"
+    }
+}

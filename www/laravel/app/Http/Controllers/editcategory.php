@@ -22,6 +22,8 @@ class Editcategory extends Controller {
 		$cat->category_name = $_REQUEST['cname'];
 		$cat->save();
 
+		
+
 		return view('viewcategory', ['cat' => category::getAllCategories()]);
 	}
 }

@@ -41,8 +41,7 @@
 				$n_prodct->image = $imageName;
 				$n_prodct->price = $_REQUEST['price'];
 				$n_prodct->save();
-
-				
+						
 
     			return view('addproduct',['cat'=>Category::getAllCategories()]);
 

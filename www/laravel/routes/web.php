@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'uses' => 'Welcome@showWelcome',
+	'as' => 'welcome'
+    //return view('welcome');
+]);
 
 Route::get('/adminlogin',[
     'uses' => 'adminLogin@getAdminlogin',
@@ -80,5 +82,6 @@ Route::post('/adminregister',[
 	Route::get('/deletecategory/{id}/',[
 		'uses' => 'Deletecategory@doDeleteCategory',
 		'as' => 'deletecategory']);
+
 
 //});
