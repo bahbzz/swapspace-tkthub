@@ -4,42 +4,59 @@
 
 	<div class="wrapper">	
 
-
-		<h1 id="register-label">Edit Products</h1>
-					<hr>
-
-					<form id="register" action="/editproduct/{!! $id !!}/" method="POST" enctype="multipart/form-data">
+		<h1 id="register-label">Add Shows</h1>
+				<hr>
+				
+				<form id="register" action="/addproduct" method="POST" enctype="multipart/form-data">
 					<div>
-						<label>Book name:</label>
-						<input type="text" name="name" placeholder="Book name" value="{!! $prody->product_name !!}">
-						
+						@if (count($errors) > 0)
+                    	<div class="alert alert-danger">                
+                        @foreach ($errors->get('name') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                    	</div>
+                   		@endif
+						<label>Show name:</label>
+						<input type="text" name="name" placeholder="Show Name">
+						</div>
+
+					<div>
+						@if (count($errors) > 0)
+                    	<div class="alert alert-danger">                
+                        @foreach ($errors->get('artist') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                    	</div>
+                   		@endif
+						<label>Artist:</label>
+						<input type="text" name="artist" placeholder="Artist">
 					</div>
 
-					<div>
-						<label>Author:</label>
-						<input type="text" name="auth" placeholder="Author" value="{!! $prody->author_name !!}">
-						
-					</div>
-
-					
-					<div>
-						<label>Price:</label>
-						<input type="text" name="price" placeholder="Price" value="{!! $prody->price !!}">
-						
-					</div>
-
-					<div>
-						<label>select Category</label>
-						<select name = "bkcat">
-						<option value="{!! $prody->category_name !!}">Select Category</option>
-								@foreach ($cat as $cat)
-									<option value="{!! $cat->category_id !!}">{!! $cat->category_name !!}</option>
-
-
-								@endforeach
 							
-						</select>
-						
+					<div>
+						@if (count($errors) > 0)
+                    	<div class="alert alert-danger">                
+                        @foreach ($errors->get('price') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                    	</div>
+                   		@endif
+						<label>Price:</label>
+						<input type="text" name="price" placeholder="Price">
+					</div>
+
+					<div>
+						@if (count($errors) > 0)
+                    	<div class="alert alert-danger">                
+                        @foreach ($errors->get('date') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                    	</div>
+                   		@endif
+						<label>Date:</label>
+						<input type="date" name="date" placeholder="">
+					</div>
+
+					<div>
+					@if (count($errors) > 0)
+                    	<div class="alert alert-danger">                
+                        @foreach ($errors->get('time') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                    	</div>
+                   		@endif
+						<label>Time:</label>
+						<input type="time" name="time" placeholder="">
 					</div>
 
 					<div>
@@ -51,5 +68,6 @@
 					<input type="hidden" value="{{ Session::token()}}" name="_token">
 
 					</form>
+					
 		</div>
 @stop

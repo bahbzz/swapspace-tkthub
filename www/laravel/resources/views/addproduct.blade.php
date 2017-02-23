@@ -60,6 +60,16 @@
 					</div>
 
 					<div>
+					@if (count($errors) > 0)
+                    	<div class="alert alert-danger">                
+                        @foreach ($errors->get('desc') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                    	</div>
+                   		@endif
+						<label>Event Description:</label>
+						<textarea name="desc" placeholder="" rows="5" columns="6"></textarea>
+					</div>
+
+					<div>
 						<label>image</label>
 						<input type="file" name="pic">
 					</div>

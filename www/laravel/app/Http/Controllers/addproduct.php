@@ -42,10 +42,11 @@
 				$n_prodct->image = $imageName;
 				$n_prodct->price = $_REQUEST['price'];
 				$n_prodct->time = $_REQUEST['time'];
+				$n_prodct->description = $_REQUEST['desc'];
 				$n_prodct->save();
 						
 
-    			return view('addproduct',['cat'=>Category::getAllCategories()]);
+    			return view('addproduct');
 
 				
 

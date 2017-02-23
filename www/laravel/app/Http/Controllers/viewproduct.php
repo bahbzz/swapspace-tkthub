@@ -8,6 +8,6 @@
 
 		public function getviewProduct() {
 
-			return view('viewproduct',['prdt' => product::all(), 'cat' => category::getAllCategories()]);
+			return view('viewproduct',['prdt' => product::paginate(5)]);
 		}
 	}

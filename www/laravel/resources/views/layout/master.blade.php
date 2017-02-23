@@ -15,7 +15,7 @@
 
     <section class="foot">
 		<div>
-			<p>&copy; 2016</p>
+			<p>&copy; 2016, Ticket Hub Inc.</p>
 		</div>
 	</section>
 </body>

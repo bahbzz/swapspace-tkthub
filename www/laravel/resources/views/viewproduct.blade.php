@@ -9,14 +9,14 @@
 			<table id="tab">
 				<thead>
 					<tr>
-						<th>Show Name</th>
-						<th>Artist Name</th>
-						<th>Show Id</th>
-						<th>Price</th>
-						<th>Date</th>
-						<th>Time</th>
-						<th>&nbsp;&nbsp;&nbsp;Edit</th>
-						<th>&nbsp;&nbsp;delete</th>
+						<th><b>Show Name</b></th>
+						<th><b>Artist Name</b></th>
+						<th><b>Show Id</b></th>
+						<th><b>Price</b></th>
+						<th><b>Event Date</b></th>
+						<th><b>Time</b></th>
+						<th><b>&nbsp;&nbsp;&nbsp;Edit</b></th>
+						<th><b>&nbsp;&nbsp;delete</b></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -25,17 +25,19 @@
 						<td>{!! $prdt->show_name !!}</td>
 						<td>{!! $prdt->artist_name !!}</td>
 						<td>{!! $prdt->show_id !!}</td>
-						<td>£{!! $prdt->price !!}</td>
+						<td>N{!! $prdt->price !!}</td>
 						<td>{!! $prdt->date !!}</td>
 						<td>{!! $prdt->time !!}</td>
-						<td><a href="/editproduct/{!! $prdt->product_id !!}/">Edit</td>
-						<td><a href="/deleteproduct/{!! $prdt->product_id !!}/">Delete</a></td>
+						<td><a href="/editproduct/{!! $prdt->show_id !!}/">Edit</td>
+						<td><a href="/deleteproduct/{!! $prdt->show_id !!}/">Delete</a></td>
 					</tr>
 
 					@endforeach
 
           		</tbody>
+
 			</table>
+
 
 		</div>
 			

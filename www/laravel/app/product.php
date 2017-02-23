@@ -13,7 +13,7 @@ class product extends Model {
 		}
 
 	public static function getProduct($id) {
-			$prody = Product::where("product_id", '=', $id)->first();
+			$prody = Product::where("show_id", '=', $id)->first();
 			return $prody;
 		}
 	
