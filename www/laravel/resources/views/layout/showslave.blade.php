@@ -18,8 +18,7 @@
     <link href="../src/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../src/css/cover.css" rel="stylesheet">
-    <link href="../src/css/signin.css" rel="stylesheet">
+    <link href="../src/css/jumbotron-narrow.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -32,33 +31,25 @@
     <![endif]-->
   </head>
   <body>
-        @include('includes.slave')
+        @include('includes.shows')
     
         @yield('content')
-    
 
 
 
 
-   <div class="mastfoot">
+
+  <footer class="footer">
+      <div class="footer">
             <div class="inner">
               <p>Cover template for <a href="http://swapspacesystems.com">SwapSpace</a>, by <a href="https://twitter.com/Ak_muiz">@Ak_muiz</a>.</p>
-              <p>&copy; 2016, Ticket Hub Inc.</p>
-            </div>
-          </div>
-
+        <p>&copy; 2016, Ticket Hub Inc.</p>
         </div>
+      </footer>
 
-      </div>
+    </div> <!-- /container -->
 
-    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-   <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
-    <script>window.jQuery || document.write('<script src="../src/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../src/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../src/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

@@ -17,6 +17,14 @@ Route::get('/', [
     //return view('welcome');
 ]);
 
+Route::get('/shows', [
+	'uses' => 'Shows@Getshows',
+	'as' => 'shows']);
+
+Route::get('/proceed',[
+	'uses' => 'Proceed@Getproceed',
+	'as' => 'proceed']);
+
 Route::get('/adminlogin',[
     'uses' => 'adminLogin@getAdminlogin',
     'as' => 'adminlogin']);

@@ -9,11 +9,11 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Ticket Hub</h3>
+              <h3 class="masthead-brand"><a href="/">Ticket Hub</a></h3>
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="/">Home</a></li>
-                  <li><a href="">Shows</a></li>
+                  <li><a href="/shows">Shows</a></li>
                   <li><a href="">About</a></li>
                 </ul>
               </nav>
