@@ -21,9 +21,10 @@
 			 
 			 $this->validate($request,[
 				'name' =>'required',
-				'auth' => 'required',
+				'artist' => 'required',
 				'price' => 'required|numeric',
-				'bkcat' => 'required',
+				'date' => 'required',
+				'time' => 'required',
 				'pic' => 'required'
 				
 				]);
@@ -35,11 +36,12 @@
     			);
 
 				$n_prodct = new Product();
-				$n_prodct->category_id = $_REQUEST['bkcat'];
-				$n_prodct->product_name = $_REQUEST['name'];
-				$n_prodct->author_name = $_REQUEST['auth'];
+				$n_prodct->date = $_REQUEST['date'];
+				$n_prodct->show_name = $_REQUEST['name'];
+				$n_prodct->artist_name = $_REQUEST['artist'];
 				$n_prodct->image = $imageName;
 				$n_prodct->price = $_REQUEST['price'];
+				$n_prodct->time = $_REQUEST['time'];
 				$n_prodct->save();
 						
 

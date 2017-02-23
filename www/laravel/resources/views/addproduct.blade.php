@@ -4,7 +4,7 @@
 
 	<div class="wrapper">	
 
-		<h1 id="register-label">Add Products</h1>
+		<h1 id="register-label">Add Shows</h1>
 				<hr>
 
 				<form id="register" action="/addproduct" method="POST" enctype="multipart/form-data">
@@ -14,18 +14,18 @@
                         @foreach ($errors->get('name') as $error)<span class='err'>{{ $error }}</span>@endforeach
                     	</div>
                    		@endif
-						<label>Book name:</label>
-						<input type="text" name="name" placeholder="Book name">
+						<label>Show name:</label>
+						<input type="text" name="name" placeholder="Show Name">
 						</div>
 
 					<div>
 						@if (count($errors) > 0)
                     	<div class="alert alert-danger">                
-                        @foreach ($errors->get('auth') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                        @foreach ($errors->get('artist') as $error)<span class='err'>{{ $error }}</span>@endforeach
                     	</div>
                    		@endif
-						<label>Author:</label>
-						<input type="text" name="auth" placeholder="Author">
+						<label>Artist:</label>
+						<input type="text" name="artist" placeholder="Artist">
 					</div>
 
 							
@@ -42,18 +42,21 @@
 					<div>
 						@if (count($errors) > 0)
                     	<div class="alert alert-danger">                
-                        @foreach ($errors->get('bkcat') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                        @foreach ($errors->get('date') as $error)<span class='err'>{{ $error }}</span>@endforeach
                     	</div>
                    		@endif
-						<label>select Category</label>
-						<select name = "bkcat">
-						<option value="">Select Category</option>
-							@foreach ($cat as $cat)
-								<option value="{!! $cat->category_id !!}">{!! $cat->category_name !!}</option>
-							@endforeach
-																									
-						</select>
-								
+						<label>Date:</label>
+						<input type="date" name="date" placeholder="">
+					</div>
+
+					<div>
+					@if (count($errors) > 0)
+                    	<div class="alert alert-danger">                
+                        @foreach ($errors->get('time') as $error)<span class='err'>{{ $error }}</span>@endforeach
+                    	</div>
+                   		@endif
+						<label>Time:</label>
+						<input type="time" name="time" placeholder="">
 					</div>
 
 					<div>

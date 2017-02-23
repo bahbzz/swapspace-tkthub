@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class product extends Model {
-	protected $primaryKey = 'product_id';
+	protected $primaryKey = 'show_id';
 	
     public static function getAllProducts(){
 			$prdt = Product::all();
