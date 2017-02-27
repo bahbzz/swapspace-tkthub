@@ -14,7 +14,7 @@
 						<th><b>Show Id</b></th>
 						<th><b>Price</b></th>
 						<th><b>Event Date</b></th>
-						<th><b>Time</b></th>
+						<th><b>&nbsp;&nbsp;Time</b></th>
 						<th><b>&nbsp;&nbsp;&nbsp;Edit</b></th>
 						<th><b>&nbsp;&nbsp;delete</b></th>
 					</tr>

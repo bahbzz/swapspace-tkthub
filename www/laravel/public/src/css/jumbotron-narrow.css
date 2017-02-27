@@ -17,6 +17,10 @@ body {
   padding: 30px;
 }
 
+.divide {
+  color: #779;
+}
+
 
 /* Custom page header */
 .header {

@@ -21,8 +21,12 @@ Route::get('/shows', [
 	'uses' => 'Shows@Getshows',
 	'as' => 'shows']);
 
-Route::get('/proceed',[
+Route::get('/proceed/{id}/',[
 	'uses' => 'Proceed@Getproceed',
+	'as' => 'proceed']);
+
+Route::post('/proceed/{id}/',[
+	'uses' => 'Proceed@postProceed',
 	'as' => 'proceed']);
 
 Route::get('/adminlogin',[

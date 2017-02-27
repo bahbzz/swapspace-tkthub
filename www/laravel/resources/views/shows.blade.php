@@ -10,13 +10,14 @@
           <p class="lead"><b>Date: {!! $prdt->date !!}</b></p>
           <p class="lead"><b>Time: {!! $prdt->time !!}</b></p>
           <p class="lead"><b>Venue: Eko Convention Centre</b></p>
-          <a href="/proceed" class="btn btn-lg btn-primary btn-block">Get Event Ticket</a>
+          <a href="/proceed/{!! $prdt->show_id !!}" class="btn btn-lg btn-primary btn-block">Get Event Ticket</a>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" style="background: url::to('{!! $prdt->image !!}')"
-          no-repeat center; background-size: cover; width=274px; height=438px;">
+          <img class="featurette-image img-responsive center-block" src='{{ asset('uploads/' . $prdt->image) }}'
+          no-repeat center; background-size: cover; width=274px; height=600px;"/>
          </div>
          </div>
+         
       @endforeach
 
         
